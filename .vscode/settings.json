@@ -1,0 +1,24 @@
+{
+    "files.exclude": {
+        // Basic
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        // Config
+        ".vscode": true,
+        ".next": true,
+        ".babelrc": true,
+        ".editorconfig": true,
+        ".eslintrc.json": true,
+        ".prettierrc": true,
+        "next.config.js": true,
+        "postcss.config.js": true,
+        "tailwind.config.js": true,
+        "tsconfig.json": true,
+        "next-env.d.ts": true,
+        "README.md": true
+    }
+}
