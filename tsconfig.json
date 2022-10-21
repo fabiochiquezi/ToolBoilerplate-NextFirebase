@@ -17,10 +17,10 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.jsx",
-    "**/*.js"
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "pages/**/*.jsx",
+    "pages/**/*.js"
    ],
   "exclude": [
     "node_modules",
