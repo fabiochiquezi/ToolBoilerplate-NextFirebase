@@ -1,3 +1,77 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard-with-typescript",
+        "plugin:cypress/recommended"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "react",
+        "jest"
+    ],
+    "rules": {
+        // Mine
+        "indent": "off",
+        "multiline-ternary": "off",
+        // TS
+        "@typescript-eslint/indent": "off",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/space-before-function-paren": "off",
+        "@typescript-eslint/member-delimiter-style": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/no-unused-vars": ["off"],
+        // Jest
+        "jest/no-disabled-tests": "warn",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        // Good Practices
+        "no-undef": "error",
+        "semi": "error",
+        "semi-spacing": "error",
+        "eqeqeq": "warn",
+        "no-invalid-this": "error",
+        "no-return-assign": "error",
+        "no-unused-expressions": ["error", { "allowTernary": true }],
+        "no-useless-concat": "error",
+        "no-useless-return": "error",
+        "no-constant-condition": "warn",
+        "no-unused-vars": ["warn"],
+        "space-before-function-paren": "off",
+        "no-mixed-spaces-and-tabs": "warn",
+        "space-before-blocks": "error",
+        "space-in-parens": "error",
+        "space-infix-ops": "error",
+        "space-unary-ops": "error",
+        "quotes": ["error", "single"],
+        "max-len": ["error", { "code": 200 }],
+        "max-lines": ["error", { "max": 100 }],
+        "keyword-spacing": "error",
+        "no-mixed-operators": "error",
+        "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
+        "no-whitespace-before-property": "error",
+        "nonblock-statement-body-position": "error",
+        "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
+        //* ES6
+        "arrow-spacing": "error",
+        "no-confusing-arrow": "error",
+        "no-duplicate-imports": "error",
+        "no-var": "error",
+        "object-shorthand": "off",
+        "prefer-const": "error",
+        "prefer-template": "warn"
+    }
 }
