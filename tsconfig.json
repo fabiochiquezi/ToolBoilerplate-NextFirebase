@@ -15,6 +15,27 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.jsx",
+    "**/*.js"
+   ],
+  "exclude": [
+    "node_modules",
+    ".firebase",
+    "coverage",
+    "deploy",
+    "design",
+    "emulators-data",
+    "cypress.config.ts",
+    "cypress",
+    "**/*.cy.ts",
+    "**/*.cy.js",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.test.js",
+    "**/*.test.jsx"
+   ]
 }
