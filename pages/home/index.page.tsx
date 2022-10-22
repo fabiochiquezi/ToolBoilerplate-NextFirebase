@@ -11,25 +11,25 @@ import { StructWrap } from '../share/structure/StructWrap'
 const Home: NextPage = () => {
     const { user } = useAuth()
 
-    async function addToDo() {
-        const ref = doc(db, 'todo', id)
-        await setDoc(ref, { list: data }, { merge: true })
-    }
+    // async function addToDo() {
+    //     const ref = doc(db, 'todo', id)
+    //     await setDoc(ref, { list: data }, { merge: true })
+    // }
 
-    async function removeToDo() {
-        const ref = doc(db, 'todo', id)
-        await setDoc(ref, { list: data }, { merge: true })
-    }
+    // async function removeToDo() {
+    //     const ref = doc(db, 'todo', id)
+    //     await setDoc(ref, { list: data }, { merge: true })
+    // }
 
-    async function updateToDo() {
-        const ref = doc(db, 'todo', id)
-        await setDoc(ref, { list: data }, { merge: true })
-    }
+    // async function updateToDo() {
+    //     const ref = doc(db, 'todo', id)
+    //     await setDoc(ref, { list: data }, { merge: true })
+    // }
 
-    async function clearAll() {
-        const ref = doc(db, 'todo', id)
-        await setDoc(ref, { list: data }, { merge: true })
-    }
+    // async function clearAll() {
+    //     const ref = doc(db, 'todo', id)
+    //     await setDoc(ref, { list: data }, { merge: true })
+    // }
 
     return (
         <div>

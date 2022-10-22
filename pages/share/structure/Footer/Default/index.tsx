@@ -4,7 +4,7 @@ import { socialData } from '../../../data/social'
 
 const Footer: React.FC = () => (
     <div className="container">
-        <footer className="w-full text-center mt-12 flex justify-center gap-2">
+        <footer className="w-full text-center mt-8 flex justify-center gap-2">
             <a
                 className="text-lg"
                 href={socialData.github.link}

@@ -8,6 +8,6 @@
 
 ##### Added
 
--   Lot of files
+-   Build up the boilerplate
 
 ---
