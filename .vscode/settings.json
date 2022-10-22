@@ -19,6 +19,16 @@
         "tailwind.config.js": true,
         "tsconfig.json": true,
         "next-env.d.ts": true,
-        "README.md": true
-    }
+        "README.md": true,
+        "ui-debug.log": true,
+        "firestore-debug.log": true,
+        "firebase-debug.log": true,
+        "firebase.json": true,
+        "firestore.indexes.json": true,
+        ".firebaserc": true,
+        "emulators-data": true,
+        // Src
+        "pages/_document.page.tsx": true
+    },
+    "css.customData": [".vscode/css_custom_data.json"]
 }

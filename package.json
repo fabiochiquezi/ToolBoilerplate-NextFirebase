@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "emulators": "firebase emulators:start",
+    "emulators:data": "firebase emulators:start --import=./emulators-data",
+    "emulators:dataGen": "firebase emulators:start --import=./new-emulators-data --export-on-exit",
+    "development": "next dev",
+    "dev": "concurrently --kill-others \"yarn emulators\" \"yarn development\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "firebase": "^9.12.1",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rsuite": "^5.20.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
@@ -22,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "autoprefixer": "^10.4.12",
     "babel-plugin-styled-components": "^2.0.7",
+    "concurrently": "^7.5.0",
     "eslint": "^8.0.1",
     "eslint-config-next": "12.3.1",
     "eslint-config-standard-with-typescript": "^23.0.0",
@@ -33,7 +40,6 @@
     "tailwindcss": "^3.2.0",
     "typescript": "*"
   },
-  "main": "index.js",
   "author": "Fábio Chiquezi <fabiochiquezi@gmail.com>",
   "license": "MIT"
 }
