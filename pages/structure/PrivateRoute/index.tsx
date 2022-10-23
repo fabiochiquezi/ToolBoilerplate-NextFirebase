@@ -9,7 +9,7 @@ interface props {
 const PrivateRoute: FC<props> = ({ children }) => {
     const { pathname } = useRouter()
     const isPublic = publicRoutes.includes(pathname)
-    const Private = () => <PrivateRoute>{children}</PrivateRoute>
+    const Private = (): ReactElement => <PrivateRoute>{children}</PrivateRoute>
     const Page = isPublic ? children : <Private />
     return Page
 }

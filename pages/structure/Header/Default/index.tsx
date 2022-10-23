@@ -17,8 +17,8 @@ const Header: React.FC = () => {
                         appearance="ghost"
                         size="lg"
                         className="transition duration-150 ease-out hover:opacity-70 active:opacity-40"
-                        onClick={signOut}
-                        disabled={loading === true ? true : false}
+                        onClick={() => signOut}
+                        disabled={loading}
                     >
                         Sign Out
                     </Button>
@@ -28,8 +28,8 @@ const Header: React.FC = () => {
                         appearance="ghost"
                         size="lg"
                         className="transition duration-150 ease-out hover:opacity-70 active:opacity-40"
-                        onClick={signIn}
-                        disabled={loading === true ? true : false}
+                        onClick={() => signIn}
+                        disabled={loading}
                     >
                         Sign In w/ Google
                     </Button>

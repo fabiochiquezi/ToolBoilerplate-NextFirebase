@@ -9,12 +9,18 @@ const Footer: React.FC = () => (
                 className="text-lg"
                 href={socialData.github.link}
                 target="_blank"
+                rel="noreferrer"
             >
                 <Button color="violet" appearance="primary" size="lg">
                     My GitHub
                 </Button>
             </a>
-            <a className="text-lg" href={socialData.repo.link} target="_blank">
+            <a
+                className="text-lg"
+                href={socialData.repo.link}
+                target="_blank"
+                rel="noreferrer"
+            >
                 <Button color="cyan" appearance="primary" size="lg">
                     This Repo
                 </Button>

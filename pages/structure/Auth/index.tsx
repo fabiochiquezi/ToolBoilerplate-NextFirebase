@@ -1,4 +1,3 @@
-import { User } from 'firebase/auth'
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { publicRoutes } from '../../routes'
@@ -7,7 +6,8 @@ import { AuthContext, AuthUpdateContext, props } from './types'
 import {
     GoogleAuthProvider,
     signInWithPopup,
-    onAuthStateChanged
+    onAuthStateChanged,
+    User
 } from 'firebase/auth'
 
 const AuthProvider: React.FC<props> = ({ children }) => {

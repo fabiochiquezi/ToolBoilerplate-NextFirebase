@@ -1,13 +1,12 @@
 import * as yup from 'yup'
 import Head from 'next/head'
-import { Button } from 'rsuite'
 import type { NextPage } from 'next'
 import { db } from '../firebase.config'
 import PlusIcon from '@rsuite/icons/Plus'
-import { Input, IconButton } from 'rsuite'
 import { Struct } from '../structure/Struct'
 import { useAuth } from '../structure/Auth/types'
 import React, { useEffect, useState } from 'react'
+import { Input, IconButton, Button } from 'rsuite'
 import {
     collection,
     doc,
@@ -16,7 +15,9 @@ import {
     setDoc
 } from 'firebase/firestore'
 
-type toDoT = { value: string }
+interface toDoT {
+    value: string
+}
 
 const Home: NextPage = () => {
     const { user } = useAuth()
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
         list()
     }, [])
 
-    async function add() {
+    async function add(): Promise<void> {
         try {
             const newToDo: toDoT = { value: toDo }
             const newList = { list: [...toDoList, newToDo] }
@@ -49,7 +50,7 @@ const Home: NextPage = () => {
         }
     }
 
-    async function list() {
+    async function list(): Promise<void> {
         const docRef = doc(db, 'todo', 'list')
         const docSnap = await getDoc(docRef)
         const data = docSnap.data() as DocumentData
@@ -57,7 +58,7 @@ const Home: NextPage = () => {
         setToDoList(list)
     }
 
-    async function remove() {
+    async function remove(): Promise<void> {
         try {
             setLoading(true)
             setToDoList([])
@@ -87,7 +88,7 @@ const Home: NextPage = () => {
                     </h1>
                     {!user && (
                         <p className="text-center text-lg">
-                            Sign In to build ToDo's
+                            Sign In to build ToDo&apos;s
                         </p>
                     )}
                     {user && (
@@ -100,10 +101,10 @@ const Home: NextPage = () => {
                                 value={toDo}
                             />
                             <IconButton
-                                onClick={add}
+                                onClick={() => add}
                                 icon={<PlusIcon />}
-                                loading={loading ? true : false}
-                                disabled={loading ? true : false}
+                                loading={!!loading}
+                                disabled={!!loading}
                             >
                                 ADD
                             </IconButton>
@@ -115,14 +116,14 @@ const Home: NextPage = () => {
                                 color="red"
                                 appearance="subtle"
                                 className="self-end"
-                                onClick={remove}
+                                onClick={() => remove}
                             >
                                 Clear List
                             </Button>
                         )}
                         {user && toDoList.length === 0 && (
                             <p className="text-center text-lg">
-                                Add ToDo's to your list!
+                                Add ToDo&apos;s to your list!
                             </p>
                         )}
                         <ul className="mt-2">

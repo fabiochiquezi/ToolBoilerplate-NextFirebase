@@ -1,13 +1,15 @@
 {
     "env": {
         "browser": true,
-        "es2021": true,
-        "jest": true
+        "es2021": true
+        // "jest": true
     },
     "extends": [
         "plugin:react/recommended",
         "standard-with-typescript",
-        "plugin:cypress/recommended"
+        // "plugin:cypress/recommended",
+        "next",
+        "next/core-web-vitals"
     ],
     "overrides": [
     ],
@@ -17,8 +19,8 @@
         "project": "./tsconfig.json"
     },
     "plugins": [
-        "react",
-        "jest"
+        "react"
+        // "jest"
     ],
     "rules": {
         // Mine
@@ -34,10 +36,10 @@
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/no-unused-vars": ["off"],
         // Jest
-        "jest/no-disabled-tests": "warn",
-        "jest/no-identical-title": "error",
-        "jest/prefer-to-have-length": "warn",
-        "jest/valid-expect": "error",
+        // "jest/no-disabled-tests": "warn",
+        // "jest/no-identical-title": "error",
+        // "jest/prefer-to-have-length": "warn",
+        // "jest/valid-expect": "error",
         // Good Practices
         "no-undef": "error",
         "semi": "error",
@@ -58,7 +60,7 @@
         "space-unary-ops": "error",
         "quotes": ["error", "single"],
         "max-len": ["error", { "code": 200 }],
-        "max-lines": ["error", { "max": 100 }],
+        // "max-lines": ["error", { "max": 100 }],
         "keyword-spacing": "error",
         "no-mixed-operators": "error",
         "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
