@@ -3,8 +3,8 @@ import Head from 'next/head'
 import 'rsuite/dist/rsuite.min.css'
 import type { AppProps } from 'next/app'
 import { useEffect, useState } from 'react'
-import { AuthProvider } from './share/structure/Auth'
-import { PrivateRoute } from './share/structure/PrivateRoute'
+import { AuthProvider } from './structure/Auth'
+import { PrivateRoute } from './structure/PrivateRoute'
 
 function MyApp({ Component, pageProps }: AppProps) {
     const [isSSR, setIsSSR] = useState(true)

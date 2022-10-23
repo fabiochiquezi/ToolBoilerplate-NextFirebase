@@ -16,9 +16,9 @@ export const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
 export const db = getFirestore(app)
 
-const isDevMode =
-    typeof window !== 'undefined' && process.env.NODE_ENV === 'development'
-
+const hasWindow = typeof window !== 'undefined'
+const isDevelopment = process.env.NODE_ENV === 'development'
+const isDevMode = hasWindow && isDevelopment
 if (isDevMode) {
     connectFirestoreEmulator(db, 'localhost', 8080)
     connectAuthEmulator(auth, 'http://localhost:9099')

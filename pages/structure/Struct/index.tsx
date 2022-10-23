@@ -6,7 +6,7 @@ interface props {
     children: ReactNode
 }
 
-const StructWrap: FC<props> = ({ children }) => (
+const Struct: FC<props> = ({ children }) => (
     <div>
         <Header />
         <div className="container">{children}</div>
@@ -14,4 +14,4 @@ const StructWrap: FC<props> = ({ children }) => (
     </div>
 )
 
-export { StructWrap }
+export { Struct }

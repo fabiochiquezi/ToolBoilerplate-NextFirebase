@@ -28,6 +28,7 @@
         ".firebaserc": true,
         "emulators-data": true,
         // Src
+        "design": true,
         "pages/_document.page.tsx": true
     },
     "css.customData": [".vscode/css_custom_data.json"]

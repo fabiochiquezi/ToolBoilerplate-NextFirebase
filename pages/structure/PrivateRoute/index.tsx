@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { FC, ReactElement } from 'react'
-import { publicRoutes } from '../../config/routes'
+import { publicRoutes } from '../../routes'
 
 interface props {
     children: ReactElement
@@ -11,7 +11,6 @@ const PrivateRoute: FC<props> = ({ children }) => {
     const isPublic = publicRoutes.includes(pathname)
     const Private = () => <PrivateRoute>{children}</PrivateRoute>
     const Page = isPublic ? children : <Private />
-
     return Page
 }
 

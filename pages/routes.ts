@@ -4,6 +4,5 @@ export const routes = {
         path: '/home'
     }
 }
-
 export const publicRoutes = [routes.home.path]
 export const privateRoutes = []

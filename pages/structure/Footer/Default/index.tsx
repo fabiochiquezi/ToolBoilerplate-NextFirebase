@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'rsuite'
-import { socialData } from '../../../data/social'
+import { socialData } from '../../../data'
 
 const Footer: React.FC = () => (
     <div className="container">

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'rsuite'
-import { useAuth, useSetAuth } from '../../Auth/types'
 import { Logo } from '../../Logo/Default'
+import { useAuth, useSetAuth } from '../../Auth/types'
 
 const Header: React.FC = () => {
     const { user, loading } = useAuth()

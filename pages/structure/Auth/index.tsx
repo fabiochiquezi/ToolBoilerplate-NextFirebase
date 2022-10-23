@@ -1,8 +1,8 @@
 import { User } from 'firebase/auth'
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import { publicRoutes } from '../../config/routes'
-import { auth } from '../../config/firebase.config'
+import { publicRoutes } from '../../routes'
+import { auth } from '../../firebase.config'
 import { AuthContext, AuthUpdateContext, props } from './types'
 import {
     GoogleAuthProvider,
@@ -33,8 +33,8 @@ const AuthProvider: React.FC<props> = ({ children }) => {
 
     async function signOut(): Promise<void> {
         try {
-            setUser(null)
             await auth.signOut()
+            setUser(null)
         } finally {
             setLoading(false)
         }
