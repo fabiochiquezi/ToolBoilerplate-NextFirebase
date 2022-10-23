@@ -1,5 +1,5 @@
 describe('first describe', () => {
-    it('first test', () => {
+    fit('first test', () => {
         expect(1 + 1).toBe(2)
     })
 })

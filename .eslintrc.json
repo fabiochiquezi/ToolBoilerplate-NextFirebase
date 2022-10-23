@@ -7,9 +7,12 @@
     "extends": [
         "plugin:react/recommended",
         "standard-with-typescript",
-        // "plugin:cypress/recommended",
+        "plugin:jest/recommended",
+        "plugin:jest/style",
+        "plugin:testing-library/react",
         "next",
         "next/core-web-vitals"
+        // "plugin:cypress/recommended",
     ],
     "overrides": [
     ],
@@ -26,6 +29,7 @@
         // Mine
         "indent": "off",
         "multiline-ternary": "off",
+        "testing-library/render-result-naming-convention": "off",
         // TS
         "@typescript-eslint/indent": "off",
         "react/react-in-jsx-scope": "off",

@@ -32,6 +32,7 @@
         "pages/jest.setup.ts": true,
         "pages/firebase.config.ts": true,
         ".eslintignore": true,
+        "coverage": true,
         // Src
         "design": true,
         "pages/_document.page.tsx": true

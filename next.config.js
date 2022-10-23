@@ -8,9 +8,12 @@ const nextConfig = {
       {
         source: '/',
         destination: '/home',
-        permanent: true,
-      },
+        permanent: true
+      }
     ]
+  },
+  eslint: {
+    dirs: ['pages', 'helpers']
   }
 }
 
