@@ -54,8 +54,7 @@ const Home: NextPage = () => {
         const docRef = doc(db, 'todo', 'list')
         const docSnap = await getDoc(docRef)
         const data = docSnap.data() as DocumentData
-        const list = data.list as toDoT[]
-        setToDoList(list)
+        if (data) setToDoList(data.list)
     }
 
     async function remove(): Promise<void> {
@@ -101,7 +100,7 @@ const Home: NextPage = () => {
                                 value={toDo}
                             />
                             <IconButton
-                                onClick={() => add}
+                                onClick={add}
                                 icon={<PlusIcon />}
                                 loading={!!loading}
                                 disabled={!!loading}
@@ -116,7 +115,7 @@ const Home: NextPage = () => {
                                 color="red"
                                 appearance="subtle"
                                 className="self-end"
-                                onClick={() => remove}
+                                onClick={remove}
                             >
                                 Clear List
                             </Button>

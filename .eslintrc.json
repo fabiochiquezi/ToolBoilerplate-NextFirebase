@@ -30,6 +30,7 @@
         "indent": "off",
         "multiline-ternary": "off",
         "testing-library/render-result-naming-convention": "off",
+        "@typescript-eslint/no-misused-promises": "off",
         // TS
         "@typescript-eslint/indent": "off",
         "react/react-in-jsx-scope": "off",

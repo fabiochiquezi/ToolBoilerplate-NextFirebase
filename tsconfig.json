@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,7 +15,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true
   },
@@ -27,7 +31,7 @@
     "helpers/**/*.js",
     "public/**/*.tsx",
     "public/**/*.jsx"
-   ],
+  ],
   "exclude": [
     "node_modules",
     ".firebase",
@@ -43,5 +47,5 @@
     "**/*.test.tsx",
     "**/*.test.js",
     "**/*.test.jsx"
-   ]
+  ]
 }

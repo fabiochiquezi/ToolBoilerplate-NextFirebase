@@ -17,7 +17,6 @@ const AuthProvider: React.FC<props> = ({ children }) => {
     const isPublic = publicRoutes.includes(router.pathname)
 
     async function signIn(): Promise<void> {
-        console.log('sss')
         try {
             if (loading) return
             setLoading(true)
