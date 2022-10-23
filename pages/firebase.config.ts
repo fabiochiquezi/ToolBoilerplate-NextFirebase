@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app'
 import { getAuth, connectAuthEmulator } from 'firebase/auth'
 import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore'
 
-const firebaseConfig = {
+export const firebaseConfig = {
     apiKey: 'AIzaSyAcBH5M_wC8qI05UvJHDEKRyw2kA0fjlSI',
     authDomain: 'toolboilerplate-nextfirebase.firebaseapp.com',
     projectId: 'toolboilerplate-nextfirebase',
