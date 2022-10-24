@@ -3,5 +3,11 @@
     "compilerOptions": {
         "jsx": "react-jsx",
         "isolatedModules": false
-    }
+    },
+    "include": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.test.js",
+        "**/*.test.jsx",
+    ]
 }

@@ -33,6 +33,11 @@
         "pages/firebase.config.ts": true,
         ".eslintignore": true,
         "coverage": true,
+        "cypress.config.ts": true,
+        "cypress/tsconfig.json": true,
+        "cypress/.eslintrc.json": true,
+        "cypress/serviceAccount.json": true,
+        "cypress/downloads": true,
         // Src
         "design": true,
         "pages/_document.page.tsx": true

@@ -17,20 +17,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "baseUrl": ".",
     "incremental": true
   },
   "include": [
     "next-env.d.ts",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "pages/**/*.jsx",
-    "pages/**/*.js",
-    "helpers/**/*.ts",
-    "helpers/**/*.tsx",
-    "helpers/**/*.jsx",
-    "helpers/**/*.js",
-    "public/**/*.tsx",
-    "public/**/*.jsx"
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.jsx",
+    "./**/*.js"
   ],
   "exclude": [
     "node_modules",
@@ -39,9 +34,12 @@
     "deploy",
     "design",
     "emulators-data",
-    "cypress.config.ts",
     "cypress",
     "**/*.cy.ts",
-    "**/*.cy.js"
+    "**/*.cy.js",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.test.js",
+    "**/*.test.jsx",
   ]
 }

@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es2021": true,
-        "jest": true
+        "jest": true,
+        "cypress/globals": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -11,8 +12,8 @@
         "plugin:jest/style",
         "plugin:testing-library/react",
         "next",
-        "next/core-web-vitals"
-        // "plugin:cypress/recommended",
+        "next/core-web-vitals",
+        "plugin:cypress/recommended"
     ],
     "overrides": [
     ],
@@ -23,7 +24,8 @@
     },
     "plugins": [
         "react",
-        "jest"
+        "jest",
+        "cypress"
     ],
     "rules": {
         // Mine
@@ -42,10 +44,10 @@
         "@typescript-eslint/no-unused-vars": ["off"],
         // Jest
         "jest/no-export": "off",
-        // "jest/no-disabled-tests": "warn",
-        // "jest/no-identical-title": "error",
-        // "jest/prefer-to-have-length": "warn",
-        // "jest/valid-expect": "error",
+        "jest/no-disabled-tests": "warn",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
         // Good Practices
         "no-undef": "error",
         "semi": "error",
