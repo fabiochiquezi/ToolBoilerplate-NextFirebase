@@ -42,10 +42,6 @@
     "cypress.config.ts",
     "cypress",
     "**/*.cy.ts",
-    "**/*.cy.js",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.test.js",
-    "**/*.test.jsx"
+    "**/*.cy.js"
   ]
 }

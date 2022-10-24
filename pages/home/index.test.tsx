@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
-import React from 'react'
+import React, { ReactElement } from 'react'
 
-const Hello = () => <h1>Hello World!</h1>
+const Hello = (): ReactElement => <h1>Hello World!</h1>
 
 it('renders the page', () => {
     render(<Hello />)

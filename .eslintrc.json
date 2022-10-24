@@ -1,8 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
-        // "jest": true
+        "es2021": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -22,8 +22,8 @@
         "project": "./tsconfig.json"
     },
     "plugins": [
-        "react"
-        // "jest"
+        "react",
+        "jest"
     ],
     "rules": {
         // Mine
@@ -41,6 +41,7 @@
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/no-unused-vars": ["off"],
         // Jest
+        "jest/no-export": "off",
         // "jest/no-disabled-tests": "warn",
         // "jest/no-identical-title": "error",
         // "jest/prefer-to-have-length": "warn",
